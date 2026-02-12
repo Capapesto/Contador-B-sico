@@ -3,7 +3,7 @@
 #include "freertos/task.h"
 #include "driver/gpio.h"
 
-int contador = 0;
+int8_t contador = 0;
 
 
 void app_main() {
@@ -11,7 +11,7 @@ void app_main() {
   while (contador > -1) {
     
 
-    printf("Contagem em: %d\n", contador);
+    printf("Valor: %d | %c | %x \n", contador, contador, contador);
     contador ++;
     vTaskDelay(1000 / portTICK_PERIOD_MS);
   }
